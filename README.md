@@ -1,6 +1,6 @@
-# ViggoArt 文档说明
+# OrlandoFile 文档说明
 
-本项目为Viggo Mortensen的[粉丝网站](https://junesirius.github.io/ViggoArt)的源代码，由“[六月的天狼星](https://junesirius.github.io)”搭建、设计、排版、维护。
+本项目为Orlando Bloom的[粉丝网站](https://junesirius.github.io/OrlandoFile)的源代码，由“[六月的天狼星](https://junesirius.github.io)”搭建、设计、排版、维护。
 
 本文档用于解释网站设计相关的各文件，未提及文件多为Jekyll、Bootstrap等的必要配置文件，无需改动。
 
@@ -32,7 +32,7 @@
   * [categories-detail.md（分类细节）](#categories-detailmd分类细节)
   * [tags.md（标签页）](#tagsmd标签页)
   * [characters.md（人物页）](#charactersmd人物页)
-  * [longnovels.md（长篇小说页）](#longnovelsmd长篇小说页)
+  * [analysis.md（统计页）](#analysismd统计页)
   * [archive.md（归档页）](#archivemd归档页)
   * [404.md（报错页）](#404md报错页)
 - [存文相关文件](#存文相关文)
@@ -43,42 +43,42 @@
 
 ## 基本信息设置文件
 
-### [\_config.yml](https://github.com/junesirius/ViggoArt/blob/master/_config.yml)
+### [\_config.yml](https://github.com/junesirius/OrlandoFile/blob/master/_config.yml)
 
-- name: Viggo's Art
-- name_en: Viggo Mortensen
+- name: The Orlando Bloom Files
+- name_en: Orlando Bloom
 - url: 主站链接
 - baseurl: 粉丝站根目录
 - paginate: 首页的每页文章数量
 - permalink: 文章自动生成的网址链接格式
 
-### [\_data/description.yml](https://github.com/junesirius/ViggoArt/blob/master/_data/description.yml)
+### [\_data/description.yml](https://github.com/junesirius/OrlandoFile/blob/master/_data/description.yml)
 
 个人签名，默认置于头像下方，位置居中。由`<br>`实现换行。
 
-### [feed.xml](https://github.com/junesirius/ViggoArt/blob/master/feed.xml)
+### [feed.xml](https://github.com/junesirius/OrlandoFile/blob/master/feed.xml)
 
-在“[https://junesirius.github.io/ViggoArt/feed.xml](https://junesirius.github.io/ViggoArt/feed.xml)”中集成显示所有文章信息。本文档无需改动。
+在“[https://junesirius.github.io/OrlandoFile/feed.xml](https://junesirius.github.io/OrlandoFile/feed.xml)”中集成显示所有文章信息。本文档无需改动。
 
-### [LICENSE](https://github.com/junesirius/ViggoArt/blob/master/LICENSE)
+### [LICENSE](https://github.com/junesirius/OrlandoFile/blob/master/LICENSE)
 
 版权及许可证信息，采用“[Creative Commons Attribution 4.0 International Public License](https://creativecommons.org/licenses/by/4.0/legalcode)”。
 
-### [robots.txt](https://github.com/junesirius/ViggoArt/blob/master/robots.txt)
+### [robots.txt](https://github.com/junesirius/OrlandoFile/blob/master/robots.txt)
 
 面向网络搜索引擎的漫游器（即网络爬虫），设置为拦截所有机器人，禁止爬虫获取本站任意目录。
 
 ## 排版布局相关文件
 
-### [\_layouts](https://github.com/junesirius/ViggoArt/tree/master/_layouts)
+### [\_layouts](https://github.com/junesirius/OrlandoFile/tree/master/_layouts)
 
 本文件夹下的`default.html`和`post.html`确定各文章页的主要排版布局。
 
-#### [default.html](https://github.com/junesirius/ViggoArt/tree/master/_layouts/default.html)
+#### [default.html](https://github.com/junesirius/OrlandoFile/tree/master/_layouts/default.html)
 
 确定每个采用default布局的页面都包含了页眉（header）、页脚（footer）、侧边栏（sidebar），且侧边栏与主要内容的宽度比例为1:3。
 
-#### [post.html](https://github.com/junesirius/ViggoArt/tree/master/_layouts/post.html)
+#### [post.html](https://github.com/junesirius/OrlandoFile/tree/master/_layouts/post.html)
 
 在`default.html`的基础上细化确定各文章页格式。
 
@@ -93,45 +93,45 @@
 - **标签**：提取并显示各文章台头的`tags`标签后内容（同一文章可同时拥有多个标签），并统计该标签在本站所有文章中出现次数。可省略。
 - **人物**：提取并显示各文章台头的`characters`标签后内容（同一文章可同时拥有多个人物），并统计该人物在本站所有文章中出现次数。可省略。
 
-### [\_includes](https://github.com/junesirius/ViggoArt/tree/master/_includes)
+### [\_includes](https://github.com/junesirius/OrlandoFile/tree/master/_includes)
 
 本文件夹内文件用于设置通用的页眉、页脚、侧边栏样式。
 
-#### [header.html](https://github.com/junesirius/ViggoArt/tree/master/_includes/header.html)
+#### [header.html](https://github.com/junesirius/OrlandoFile/tree/master/_includes/header.html)
 
 - 在\<head\>的\<title\>标签下确定各页面标题显示为：“文章标题 | 作者”
-- 在\<head\>的\<link rel="icon"\>标签下设置本站的图标，图标存储位置为[favicon.jpg](https://github.com/junesirius/ViggoArt/blob/master/assets/images/favicon.jpg)
+- 在\<head\>的\<link rel="icon"\>标签下设置本站的图标，图标存储位置为[favicon.jpg](https://github.com/junesirius/OrlandoFile/blob/master/assets/images/favicon.jpg)
 - 设置导航栏固定在窗口顶部，不随页面下滑而改变位置
 - 导航栏按钮包括：
   - 左上角笔名、**首页**：自动跳转至本站首页
   - **分类**：跳转至categories.html
   - **标签**：跳转至tags.html
   - **人物**：跳转至characters.html
-  - **长篇**：跳转至longnovels.html
+  - **统计**：跳转至analysis.html
   - **归档**：跳转至archive.html
 
-#### [footer.html](https://github.com/junesirius/ViggoArt/tree/master/_includes/footer.html)
+#### [footer.html](https://github.com/junesirius/OrlandoFile/tree/master/_includes/footer.html)
 
-- **版权**：所有者为本站作者（同时标注中文及英文笔名），时间为当前年份。
-- **致谢**：致谢者信息及链接存储于[\_data/thanks.yml](https://github.com/junesirius/ViggoArt/blob/master/_data/thanks.yml)。
+- **版权**：所有资源的版权所有者为原作者，时间为当前年份。
+- **致谢**：致谢者信息及链接存储于[\_data/thanks.yml](https://github.com/junesirius/OrlandoFile/blob/master/_data/thanks.yml)。
 
-#### [sidebar.html](https://github.com/junesirius/ViggoArt/tree/master/_includes/sidebar.html)
+#### [sidebar.html](https://github.com/junesirius/OrlandoFile/tree/master/_includes/sidebar.html)
 
-依次显示：头像、个签、最近更新、热门圈子、热门标签、长篇连载
+依次显示：头像、个签、最近更新、热门圈子、热门标签
 
-- **头像**：图片与本站图标相同（也可选择不同图片），存储于[favicon.jpg](https://github.com/junesirius/ViggoArt/blob/master/assets/images/favicon.jpg)，显示为圆形。
-- **个签**：文字居中排列，内容存储于[\_data/description.yml](https://github.com/junesirius/ViggoArt/blob/master/_data/description.yml)。
+- **头像**：图片与本站图标相同（也可选择不同图片），存储于[favicon.jpg](https://github.com/junesirius/OrlandoFile/blob/master/assets/images/favicon.jpg)，显示为圆形。
+- **个签**：文字居中排列，内容存储于[\_data/description.yml](https://github.com/junesirius/OrlandoFile/blob/master/_data/description.yml)。
 - **最近更新**：从所有更新的文章中自动选取最新的五篇，按从新到旧顺序显示标题并提供跳转链接。显示文章数量可进行更改。
 - **热门分类**：统计所有`categories`标签，选取文章数量最多的五个分类，按从多到少顺序显示类别名称及对应文章数量，点击链接可跳转至`categories.html`中对应分类的位置。显示的热门分类数量可进行更改。
 - **热门标签**：统计所有`tags`标签，选取文章数量最多的五个标签，按从多到少顺序显示标签名称及对应文章数量，点击链接可跳转至`tags.html`中对应标签的位置，查看拥有该标签的所有文章。显示的热门标签数量可进行更改。
 
-### [\_sass](https://github.com/junesirius/ViggoArt/tree/master/_sass)
+### [\_sass](https://github.com/junesirius/OrlandoFile/tree/master/_sass)
 
-#### [theme.scss](https://github.com/junesirius/ViggoArt/tree/master/_sass/theme.scss)
+#### [theme.scss](https://github.com/junesirius/OrlandoFile/tree/master/_sass/theme.scss)
 
-包含大部分自定义的css格式，包括页眉、页脚、侧边栏、文章页的主要格式。设置个站背景纹理图片为[canvas_bg.jpg](https://github.com/junesirius/ViggoArt/blob/master/assets/images/canvas_bg.jpg)。
+包含大部分自定义的css格式，包括页眉、页脚、侧边栏、文章页的主要格式。设置个站背景纹理图片为[canvas_bg.jpg](https://github.com/junesirius/OrlandoFile/blob/master/assets/images/canvas_bg.jpg)。
 
-#### [custom\_color.scss](https://github.com/junesirius/ViggoArt/tree/master/_sass/custom_color.scss)
+#### [custom\_color.scss](https://github.com/junesirius/OrlandoFile/tree/master/_sass/custom_color.scss)
 
 自定义主题色。
 
@@ -139,47 +139,47 @@
 - <span style="color: #d2c0b1;">second-color（悬浮色）：当鼠标悬浮在超链接上时显示的颜色，建议使用浅色。本站使用色号为：![#d2c0b1](https://via.placeholder.com/15/d2c0b1/000000?text=+)`#d2c0b1`</span>
 - <span style="color: #330000;">third-color（标题色）：首页及各文章页显示的文章标题颜色，建议选择深色。本站使用色号为：![#330000](https://via.placeholder.com/15/330000/000000?text=+)`#330000`</span>
 
-#### [syntax.scss](https://github.com/junesirius/ViggoArt/tree/master/_sass/syntax.scss)
+#### [syntax.scss](https://github.com/junesirius/OrlandoFile/tree/master/_sass/syntax.scss)
 
 来自[Jekyll](https://github.com/jekyll/jekyll)，未作更改。
 
 ## 网站主要界面
 
-### [index.html（首页）](https://github.com/junesirius/ViggoArt/blob/master/index.html)
+### [index.html（首页）](https://github.com/junesirius/OrlandoFile/blob/master/index.html)
 
-在`index.html`页面按时间顺序由新到旧显示文章日期、标题、缩略内容。每页文章数由[\_config.yml](https://github.com/junesirius/ViggoArt/blob/master/_config.yml)中`paginator`后的数值进行调整，本站采用每页7篇文章。
+在`index.html`页面按时间顺序由新到旧显示文章日期、标题、缩略内容。每页文章数由[\_config.yml](https://github.com/junesirius/OrlandoFile/blob/master/_config.yml)中`paginator`后的数值进行调整，本站采用每页7篇文章。
 
 每篇文章的缩略内容由各文章页台头`description`标签后内容确定，若该标签为空，则截取除空格外的前150字符（该数值可调整）。
 
 点击各文章标题可进入文章页。
 
-### [categories.md（分类页）](https://github.com/junesirius/ViggoArt/blob/master/categories.md)
+### [categories.md（分类页）](https://github.com/junesirius/OrlandoFile/blob/master/categories.md)
 
 用于自动生成`categories.html`静态页面，按字母顺序依序排列所有出现过的文章分类（提取自各文章台头的`categories`信息），在每个分类下按字母顺序列举所有属于该分类的文章中出现过的标签及人物。
 
 点击各标签可跳转至`tags.html`页面的对应标签位置，点击各人物可跳转至`characters.html`页面的对应位置，点击分类的标题可跳转至`categories-detail.html`页面的对应位置。
 
-### [categories-detail.md（分类细节）](https://github.com/junesirius/ViggoArt/blob/master/categories-detail.md)
+### [categories-detail.md（分类细节）](https://github.com/junesirius/OrlandoFile/blob/master/categories-detail.md)
 
 用于自动生成`categories-detail.html`静态页面，按字母顺序依序排列所有出现过的文章分类（提取自各文章台头的`categories`信息），在每个分类下按时间顺序从新到旧列举所有属于该分类的文章。点击文章标题可进入文章页。
 
-### [tags.md（标签页）](https://github.com/junesirius/ViggoArt/blob/master/tags.md)
+### [tags.md（标签页）](https://github.com/junesirius/OrlandoFile/blob/master/tags.md)
 
 用于自动生成`tags.html`静态页面，按字母顺序依序排列所有出现过的标签（提取自各文章台头的`tags`信息），在每个标签下按时间顺序从新到旧列举所有注有该标签的文章。点击文章标题可进入文章页。
 
-### [characters.md（人物页）](https://github.com/junesirius/ViggoArt/blob/master/characters.md)
+### [characters.md（人物页）](https://github.com/junesirius/OrlandoFile/blob/master/characters.md)
 
 用于自动生成`characters.html`静态页面，按字母顺序依序排列所有出现过的人物（提取自各文章台头的`characters`信息），在每个人物下按时间顺序从新到旧列举所有出现该人物的文章。点击文章标题可进入文章页。
 
-### [longnovels.md（长篇小说页）](https://github.com/junesirius/ViggoArt/blob/master/longnovels.md)
+### [analysis.md（统计页）](https://github.com/junesirius/ViggoArt/blob/master/analysis.md)
 
-用于自动生成`longnovels.html`静态页面，按字母顺序依序排列所有出现过的长篇小说（提取自各文章台头的`long_novels`信息），在每个长篇小说标题下按时间顺序从新到旧列举所有属于该长篇系列的连载文章。点击文章标题可进入文章页。
+用于自动生成`analysis.html`静态页面，将各个分类、标签、人物按照出现次数从多到少进行排列统计，点击可分别进入分类页、标签页和人物页对应位置。统计总文章数、总字数、访客量和访问量，其中访客量、访问量与[总站](https://junesirius.github.io)下的各个分站合并统计。
 
-### [archive.md（归档页）](https://github.com/junesirius/ViggoArt/blob/master/archive.md)
+### [archive.md（归档页）](https://github.com/junesirius/OrlandoFile/blob/master/archive.md)
 
 用于自动生成`archive.html`静态页面，按时间顺序从新到旧列举所有文章标题，并在右侧标注发表时间。点击文章标题可进入文章页。
 
-### [404.md（报错页）](https://github.com/junesirius/ViggoArt/blob/master/404.md)
+### [404.md（报错页）](https://github.com/junesirius/OrlandoFile/blob/master/404.md)
 
 用于自动生成`404.html`静态页面。当无法在主站根目录下找到指定页面时自动跳转至`404.html`页面，显示“404 未找到页面 Page not found”。本页较为简陋，可进行更多设计。
 
@@ -187,7 +187,7 @@
 
 ## 存文相关文件
 
-### [\_posts](https://github.com/junesirius/ViggoArt/blob/master/_posts)
+### [\_posts](https://github.com/junesirius/OrlandoFile/blob/master/_posts)
 
 本文件夹用于储存文章，所有文章的文件名必须遵守`年-月-日-标题.md`的格式。
 
@@ -204,11 +204,11 @@
 - description: 文章简介，用于展示在首页，字数不限。若省略，则在首页自动展示文章前150字（该字数可在`index.html`页调整）。
 - published: `true`/`false`。此项默认为`true`，若填写`false`，则该文章不会出现在首页，即使本地调试时使用`--drafts`选项也不会出现。
 
-### [\_drafts](https://github.com/junesirius/ViggoArt/blob/master/_drafts)
+### [\_drafts](https://github.com/junesirius/OrlandoFile/blob/master/_drafts)
 
-本文件夹存储所有不打算发表在个站的草稿文章，文件标题、台头格式等可不遵守`_posts`的格式要求。当git page网站在线编译时会自动忽略本文件夹，但在本地调试时可通过`--drafts`，命令进行编译查看。
+本文件夹存储所有暂未发表在网站的草稿文章，文件标题、台头格式等可不遵守`_posts`的格式要求。当git page网站在线编译时会自动忽略本文件夹，但在本地调试时可通过`--drafts`，命令进行编译查看。
 
-### [assets](https://github.com/junesirius/ViggoArt/blob/master/assets)
+### [assets](https://github.com/junesirius/OrlandoFile/blob/master/assets)
 
 本文件夹用于存放图片、视频、音乐等多媒体文件，在文章页通过嵌入的方式进行展示。
 

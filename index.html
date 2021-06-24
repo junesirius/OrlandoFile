@@ -21,19 +21,6 @@ title: 首页
       {% else %}
         {{ post.description }}
       {% endif %}
-
-      {% unless post.tags == null %}
-        {% if post.tags contains "画" or post.tags contains "摄影" %}
-          <br>
-            {% assign images = post.content | split: "<img src=" %}
-            {% for image in images %}
-              {% assign img = image | split: ' alt="" />' | first %}
-              {% if img contains site.baseurl %}
-                <a href="{{ site.baseurl }}{{ post.url }}"><img src={{ img }} style="height: 200px; width: auto; object-fit: scale-down;"></a>
-              {% endif %}
-            {% endfor %}
-        {% endif %}
-      {% endunless %}
     </div>
     
 </div>
