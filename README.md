@@ -135,9 +135,9 @@
 
 自定义主题色。
 
-- <span style="color: #003B39;">main-color（主题色）：用于页眉、页脚、侧边栏的背景色，及文章正文字体颜色，建议使用深色。本站使用色号为：![#003B39](https://via.placeholder.com/15/003B39/000000?text=+)`#003B39`</span>
-- <span style="color: #d4ecfb;">second-color（悬浮色）：当鼠标悬浮在超链接上时显示的颜色，建议使用浅色。本站使用色号为：![#d4ecfb](https://via.placeholder.com/15/d4ecfb/000000?text=+)`#d4ecfb`</span>
-- <span style="color: #002927;">third-color（标题色）：首页及各文章页显示的文章标题颜色，建议选择深色。本站使用色号为：![#002927](https://via.placeholder.com/15/002927/000000?text=+)`#002927`</span>
+- <span style="color: #663333;">main-color（主题色）：用于页眉、页脚、侧边栏的背景色，及文章正文字体颜色，建议使用深色。本站使用色号为：![#663333](https://via.placeholder.com/15/663333/000000?text=+)`#663333`</span>
+- <span style="color: #d2c0b1;">second-color（悬浮色）：当鼠标悬浮在超链接上时显示的颜色，建议使用浅色。本站使用色号为：![#d2c0b1](https://via.placeholder.com/15/d2c0b1/000000?text=+)`#d2c0b1`</span>
+- <span style="color: #330000;">third-color（标题色）：首页及各文章页显示的文章标题颜色，建议选择深色。本站使用色号为：![#330000](https://via.placeholder.com/15/330000/000000?text=+)`#330000`</span>
 
 #### [syntax.scss](https://github.com/junesirius/ViggoArt/tree/master/_sass/syntax.scss)
 
