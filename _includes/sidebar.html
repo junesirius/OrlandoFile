@@ -1,0 +1,75 @@
+{% assign trans = site.data.values[site.lan] %}
+<div class="sidebar well">
+    <header class="sidebar-header" role="banner">
+        <a href="{{ site.baseurl }}/index">
+            <img src="{{ site.baseurl }}/assets/images/favicon.jpg" class="img-circle" height="100%" width="100%" />
+        </a>
+    </header>
+    <div class="description-style">
+        {{ site.data.description }}
+    </div>
+</div>
+
+<!-- 最近更新 -->
+<div class="sidebar well">
+    <h1>{{ trans.recent_posts }}</h1>
+    <ul>
+        {% for post in site.posts limit: 5 %}
+          <li><a href="{{ site.baseurl}}{{ post.url }}">{{ post.title }}</a></li>
+        {% endfor %}
+    </ul>
+</div>
+
+<!-- 热门圈子 -->
+<div class="sidebar well">
+    <h1>{{ trans.hot_categories }}</h1>
+    {% assign max_category_count = 0 %}
+    {% for category in site.categories %}
+        {% if category[1].size > max_category_count %}
+            {% assign max_category_count = category[1].size %}
+        {% endif %}
+    {% endfor %}
+
+    {% assign sortedcategories = site.categories | sort %}
+    {% assign category_display_count = 0 %}
+    {% for i in (1..max_category_count) reversed %}
+        {% for category in sortedcategories %}
+            {% if category[1].size == i %}
+                <li>
+                    <a href="{{ site.baseurl }}/categories#{{ category[0] }}">{{ category[0] }} ({{ category[1].size }})</a>
+                    {% assign category_display_count = category_display_count | plus: 1 %}
+                </li>
+            {% endif %}
+        {% endfor %}
+        {% if category_display_count >= 5 %}
+            {% break %}
+        {% endif %}
+    {% endfor %}
+</div>
+
+<!-- 热门标签 -->
+<div class="sidebar well">
+    <h1>{{ trans.hot_tags }}</h1>
+    {% assign max_tag_count = 0 %}
+    {% for tag in site.tags %}
+        {% if tag[1].size > max_tag_count %}
+            {% assign max_tag_count = tag[1].size %}
+        {% endif %}
+    {% endfor %}
+
+    {% assign sortedtags = site.tags | sort %}
+    {% assign tag_display_count = 0 %}
+    {% for i in (1..max_tag_count) reversed %}
+        {% for tag in sortedtags %}
+            {% if tag[1].size == i %}
+                <li>
+                    <a href="{{ site.baseurl }}/tags#{{ tag[0] }}">{{ tag[0] }} ({{ tag[1].size }})</a>
+                    {% assign tag_display_count = tag_display_count | plus: 1 %}
+                </li>
+            {% endif %}
+        {% endfor %}
+        {% if tag_display_count >= 5 %}
+            {% break %}
+        {% endif %}
+    {% endfor %}
+</div>
