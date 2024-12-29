@@ -4,7 +4,7 @@ title: 归档
 ---
 
 <div class="well article">
-{%for post in site.posts %}
+{%for post in site.posts reversed %}
     {% unless post.next %}
         <h2>{{ post.date | date: '%Y' }}</h2>
         <ul>
