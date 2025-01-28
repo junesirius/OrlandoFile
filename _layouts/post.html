@@ -123,16 +123,20 @@ layout: default
 
 </div>
 
+{% unless page.origin == null %}
 <div class="pagination" style="width: 100%">
     <div class="col-md-6" style="text-align: left">
-    {% if page.previous %}
-    <a class="btn btn-default" href="{{ site.baseurl}}{{ page.previous.url }}" class="previous">{{ trans.newer_post }}</a> {{ page.previous.title }}
+    {% assign previous_post = site.posts | where: "origin", page.origin | where: "date", "lt", page.date | sort: "date" | last %}
+    {% if previous_post %}
+    <a class="btn btn-default" href="{{ site.baseurl }}{{ previous_post.url }}" class="previous">{{ trans.newer_post }}</a> {{ previous_post.title }}
     {% endif %}
     </div>
 
     <div class="col-md-6" style="text-align: right">
-    {% if page.next %}
-    <a class="btn btn-default" href="{{ site.baseurl}}{{ page.next.url }}" class="next">{{ trans.older_post }}</a> {{ page.next.title }}
+    {% assign next_post = site.posts | where: "origin", page.origin | where: "date", "gt", page.date | sort: "date" | first %}
+    {% if next_post %}
+    <a class="btn btn-default" href="{{ site.baseurl }}{{ next_post.url }}" class="next">{{ trans.older_post }}</a> {{ next_post.title }}
     {% endif %}
     </div>
 </div>
+{% endunless %}
