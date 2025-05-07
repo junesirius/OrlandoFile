@@ -32,7 +32,7 @@
     <!-- Add no-referrer policy for qpic -->
     <script>
         $(document).ready(function(){
-            $('.article .article-body img').each(function(){
+            $('.article img').each(function(){
                 var imgSrc = $(this).attr('src');
                 var url = new URL(imgSrc);
                 if (url.hostname === 'mmbiz.qpic.cn') {
