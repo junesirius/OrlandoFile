@@ -28,6 +28,20 @@
 
         gtag('config', 'G-8FT2XTL9LX');
     </script>
+
+    <!-- Add no-referrer policy for qpic -->
+    <script>
+        $(document).ready(function(){
+            $('.article .article-body img').each(function(){
+                var imgSrc = $(this).attr('src');
+                var url = new URL(imgSrc);
+                if (url.hostname === 'mmbiz.qpic.cn') {
+                    $(this).attr('referrerpolicy', 'no-referrer');
+                    $(this).attr('src', imgSrc + '?' + new Date().getTime());
+                }
+            });
+        });
+    </script>
 </head>
 
 <body>
