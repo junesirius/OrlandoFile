@@ -52,6 +52,7 @@ title: 统计
                     {% endif %}
                 {% endfor %}
                 <li>
+                    <div class="row" style="margin: 0; padding: 0;">
                     <div class="col-md-7" style="margin: 0; padding: 0">
                         {% if long_novel_finished == true %}
                             <a href="{{ site.baseurl }}/longnovels#{{ long_novel_list[i] }}">{{ long_novel_list[i] }}（已完结）</a>
@@ -66,6 +67,7 @@ title: 统计
                         <span class="post-date">
                             {{ long_novel_update_time | date: site.date_format.tags }}
                         </span>
+                    </div>
                     </div>
                 </li>
                 {% assign long_novel_wordcount = 0 %}
