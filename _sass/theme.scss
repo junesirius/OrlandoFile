@@ -186,3 +186,6 @@ body {
 .analysis-finish-color a {
     color: $analysis-finish-color !important;
 }
+.analysis-finish-color a:hover {
+    color: $analysis-finish-hover-color !important;
+}
