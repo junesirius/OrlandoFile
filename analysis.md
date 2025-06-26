@@ -58,7 +58,11 @@ title: 统计
                 {% endif %}
                 <li>
                     <div class="col-md-7" style="margin: 0; padding: 0">
-                        <a href="{{ site.baseurl }}/longnovels#{{ long_novel_list[i] }}">{{ long_novel_list[i] }}</a>
+                    {% if long_novel_finished == true %}
+                    <a href="{{ site.baseurl }}/longnovels#{{ long_novel_list[i] }}" class="analysis-finish-color">{{ long_novel_list[i] }}</a>
+                    {% else %}
+                    <a href="{{ site.baseurl }}/longnovels#{{ long_novel_list[i] }}">{{ long_novel_list[i] }}</a>
+                    {% endif %}
                     </div>
                     <div class="col-md-3" style="margin: 0; padding: 0">
                         {{ long_novel_count_list[i] }}篇，{{ long_novel_wordcount }}字
