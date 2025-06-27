@@ -178,14 +178,3 @@ body {
 .navbar-custom .icon-bar {
     background-color: $nav-bar-icon-bar;
 }
-
-/* analysis page */
-.analysis-finish-color {
-    color: $analysis-finish-color;
-}
-.analysis-finish-color a {
-    color: $analysis-finish-color !important;
-}
-.analysis-finish-color a:hover {
-    color: $analysis-finish-hover-color !important;
-}
